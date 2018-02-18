@@ -26,6 +26,7 @@ defmodule TrackerWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/feed", PageController, :feed
     resources "/users", UserController
     resources "/tasks", TaskController
     post "/session", SessionController, :create

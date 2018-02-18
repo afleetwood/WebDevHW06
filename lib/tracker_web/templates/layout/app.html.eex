@@ -13,12 +13,14 @@
 
   <body>
     <div class="container">
+      <!-- Header created with guidance from lecture 12 material -->
       <header class="header">
 	<div class="row">
 	  <div class="col-3 offset-9">
 	    <%= if @current_user do %>
 	      <p>
 		Logged in as: <%= @current_user.name %>
+		<%= link "Go to Feed", to: "/feed"%>
 		<%= link "Log Out", to: "/session", method: :delete %>
 	      </p>
 	    <% else %>
